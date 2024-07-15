@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "expected_activicties",
+  "info": {
+    "singularName": "expected-activicty",
+    "pluralName": "expected-activicties",
+    "displayName": "expected_activicty"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "details": {
+      "type": "text"
+    },
+    "products_and_activitie": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::products-and-activitie.products-and-activitie",
+      "inversedBy": "expected_activicties"
+    }
+  }
+}

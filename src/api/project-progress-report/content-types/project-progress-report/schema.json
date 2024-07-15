@@ -1,0 +1,93 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_progress_reports",
+  "info": {
+    "singularName": "project-progress-report",
+    "pluralName": "project-progress-reports",
+    "displayName": "project_progress_report"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "report_type": {
+      "type": "string"
+    },
+    "project_number": {
+      "type": "string"
+    },
+    "project_type": {
+      "type": "string"
+    },
+    "project_title": {
+      "type": "string"
+    },
+    "report_date": {
+      "type": "date"
+    },
+    "implementation_location": {
+      "type": "string"
+    },
+    "target_provinces": {
+      "type": "string"
+    },
+    "target_territories": {
+      "type": "string"
+    },
+    "project_duration": {
+      "type": "integer"
+    },
+    "project_extended": {
+      "type": "boolean"
+    },
+    "start_date": {
+      "type": "date"
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "implementing_agency": {
+      "type": "string"
+    },
+    "target_groups": {
+      "type": "string"
+    },
+    "implementation_partners": {
+      "type": "string"
+    },
+    "grant_total": {
+      "type": "decimal"
+    },
+    "funds_received": {
+      "type": "decimal"
+    },
+    "funds_used": {
+      "type": "decimal"
+    },
+    "remaining_funds": {
+      "type": "decimal"
+    },
+    "cofinancing": {
+      "type": "string"
+    },
+    "budget_status": {
+      "type": "string"
+    },
+    "baseline_data": {
+      "type": "string"
+    },
+    "products_and_activities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::products-and-activitie.products-and-activitie",
+      "mappedBy": "project_progress_report"
+    },
+    "project_result": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project-result.project-result",
+      "mappedBy": "project_progress_report"
+    }
+  }
+}

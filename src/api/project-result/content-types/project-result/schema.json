@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_results",
+  "info": {
+    "singularName": "project-result",
+    "pluralName": "project-results",
+    "displayName": "project_result"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "result": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "actual_results": {
+      "type": "text"
+    },
+    "comments": {
+      "type": "text"
+    },
+    "project_progress_report": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project-progress-report.project-progress-report",
+      "inversedBy": "project_result"
+    }
+  }
+}
